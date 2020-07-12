@@ -12,18 +12,26 @@ jobs:
     - 
       uses: actions/checkout@v2
     - 
-      name: Generate Site
-      uses: crazy-max/ghaction-hugo@v1
+      name: Build & Deploy to GitHub Pages
       with:
-        version: latest
-        extended: false
-        args: --cleanDestinationDir --minify --verbose
-    -
-      name: Publish Pages
-      if: success() 
-      uses: crazy-max/ghaction-github-pages@v2
-      with:
-        target_branch: gh-pages
-        build_dir: public
-      env:
+        REMOTE_BRANCH: gh-pages
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: yurikoval/middleman-gh-pages-action@master
+
+
+    #- 
+    #  name: Generate Site
+    #  uses: crazy-max/ghaction-hugo@v1
+    #  with:
+    #    version: latest
+    #    extended: false
+    #    args: --cleanDestinationDir --minify --verbose
+    #-
+    #  name: Publish Pages
+    #  if: success() 
+    #  with:
+    #    target_branch: gh-pages
+    #    build_dir: public
+    #  env:
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #  uses: crazy-max/ghaction-github-pages@v2
