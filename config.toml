@@ -10,9 +10,9 @@ enableInlineShortcodes = true
 [menu]
 
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    identifier = "impressum"
+    name = "Impressum"
+    url = "/impressum/"
     weight = 10
 
 [taxonomies]
