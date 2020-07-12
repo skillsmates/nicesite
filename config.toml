@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "hugonews example site"
 theme = "hugonews"
 
+[module]
+  [[module.imports]]
+    path = "github.com/spaghettiwews/hugonews"
+
 [taxonomies]
     tag = "tags"
     category = "categories"
