@@ -1,4 +1,4 @@
-## The Automated Home Page
+## JSON Automated Home Page
 
 This repo is the home page of skillsmates.com
 
