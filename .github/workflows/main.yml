@@ -1,0 +1,19 @@
+name: StaticGen
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build and Deploy
+      uses: testthedocs/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BUILD_DIR: test/build/ 
+        BUILD_SCRIPT: npm install && npm run-script build 
