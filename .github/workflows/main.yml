@@ -9,11 +9,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Build and Deploy
-      uses: testthedocs/github-pages-deploy-action@master
+    - 
+      uses: actions/checkout@v2
+    - 
+      name: Generate Site
+      uses: crazy-max/ghaction-hugo@v1
+      with:
+        version: latest
+        extended: false
+        args: --cleanDestinationDir --minify --verbose
+    -
+      name: Publish Pages
+      if: success() 
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: public
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BUILD_DIR: test/build/ 
-        BUILD_SCRIPT: npm install && npm run-script build 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
