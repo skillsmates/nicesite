@@ -1,4 +1,4 @@
-name: StaticGen
+name: StaticGen Hugo
 
 on:
   push:
@@ -21,9 +21,9 @@ jobs:
     -
       name: Publish Pages
       if: success() 
+      uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages
         build_dir: public
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      uses: crazy-max/ghaction-github-pages@v2
