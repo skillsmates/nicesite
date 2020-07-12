@@ -1,6 +1,7 @@
 name: Data Validate JSONs
 
-on: [pull_request]
+on: 
+  push: [ master ]
 
 jobs:
   verify-json-validation:
