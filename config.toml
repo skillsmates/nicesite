@@ -1,7 +1,7 @@
 languageCode = "en-us"
 title = "hugonews example site"
 baseURL = "https://example.com/"
-theme = "hugonews"
+#theme = "hugonews"
 
 #[module]
 #  [[module.imports]]
