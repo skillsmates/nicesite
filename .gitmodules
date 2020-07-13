@@ -1,3 +1,3 @@
-[submodule "hugonews"]
+[submodule "themes/hugonews"]
   path = themes/hugonews
-  url = https://github.com/spaghettiwews/hugonews
+  url = https://github.com/spaghettiwews/hugonews.git
