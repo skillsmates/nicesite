@@ -24,30 +24,26 @@ summaryLength = 50
   page = "/:slug/"
 
 [[menu.sidebar]]
-  name = "More Blog"
+  name = "Link 1"
   url = "https://example.com"
 
 [[menu.sidebar]]
-  name = "More Files"
+  name = "Link 2"
   url = "https://example.org"
 
+#[[menu.navbar]]
+#  name = "Link 1"
+#  url = "https://example.org"
 
-[[menu.navbar]]
-  name = "Super"
-  url = "https://example.org"
-
-[[menu.navbar]]
-  name = "Under"
-  url = "https://example.org"
 
 # Theme variables
 #
 [params]
   # Site author
-  author = "Mr Big"
+  author = "Your Name"
 
   # Description/subtitle for homepage (can be Markdown)
-  description = "Do We like to read? Go ahead, make my day."
+  description = "A simple Hugo theme based on the Bootstrap v4 blog example."
 
   # Show header (default: true)
   #header_visible = true
@@ -94,3 +90,14 @@ summaryLength = 50
     # See: https://dev.twitter.com/cards/types/summary-large-image
     twitter = "username"
 
+# Default content language for Hugo 0.17's multilingual support (default is "en")
+# See: https://github.com/spf13/hugo/blob/master/docs/content/content/multilingual.md
+#DefaultContentLanguage = "en"
+
+# Languages to render
+#[languages.en]
+#[languages.bg]
+  # Bulgarian date format is dd.mm.yyyy
+  #date_format = "02.01.2006"
+
+# vim: ts=2 sw=2 et
